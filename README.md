@@ -21,3 +21,6 @@ import { dynamicString } from 'dynamic-string'
 const string = dynamicString('Hello ${name}', { name: 'João' }) // 'Hello João'
 const stringFn = dynamicString('Hey ${name}') // fn ({name}) => `Hey ${name}`
 ```
+## Examples
+
+- [Rendering html](https://codesandbox.io/s/dynamic-string-html-interpolation-ym90q?file=/src/index.js)
