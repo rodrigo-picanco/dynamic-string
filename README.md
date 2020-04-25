@@ -6,7 +6,8 @@ Jack Kerrouac
 A curried dynamic template string for those who need to reuse intepolation in js
 
 `yarn add dynamic-string`
-`npm i rdynamic-string`
+
+`npm i dynamic-string`
 
 ## Getting started
 
