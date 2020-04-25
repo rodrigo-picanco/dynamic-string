@@ -5,26 +5,14 @@ Jack Kerrouac
 
 A curried dynamic template string for those who need to reuse intepolation in js
 
-`yarn add react-async-renderer`
-`npm i react-async-renderer`
+`yarn add dynamic-string`
+`npm i rdynamic-string`
 
 ## Getting started
 
-```jsx
-import React from 'react'
-import { AsyncRenderer } from 'react-async-renderer'
+```js
+import { dynamicString } from 'dynamic-string'
 
-export default (props) => {
-  return (
-    <AsyncRenderer
-      url="endpoint"
-      fetcher={fetch} // can be any async fn
-      fetcherConfig={{ method: 'GET' }} // the async fn arguments
-      loader={() => <p>Loading...</p>}
-      render={(reponse) => {
-        // do as you please with the response
-      }}
-    />
-  )
-}
+const string = dynamicString('Hello ${name}', { name: 'João' }) // 'Hello João'
+const stringFn = dynamicString('Hey ${name}') // fn ({name}) => `Hey ${name}`
 ```
