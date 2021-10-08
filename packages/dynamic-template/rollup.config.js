@@ -8,11 +8,11 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
-      exports: 'named',
+      exports: 'default',
       sourcemap: true,
       strict: false,
     },
   ],
   plugins: [typescript()],
-  external: ['react', 'react-dom'],
+  external: ['ramda']
 }
