@@ -25,8 +25,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 16
           registry-url: https://registry.npmjs.org/
+          node-version: ${{ matrix.node-version }}
+          always-auth: true
       - run: npm run lerna:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
