@@ -1,5 +1,7 @@
 # Dynamic string
-A curried dynamic template string for those who need to reuse string intepolation in javascript in things such as api endpoints, user context based text, etc.
+Reuse string interpolation in JavaScript. `dynamic-string` is a a curried dynamic template string. 
+
+You can use it to replace id's in API endpoints, username's in greetings or whatever your imagination leads to :)
 
 ## Install
 
@@ -8,12 +10,18 @@ A curried dynamic template string for those who need to reuse string intepolatio
 `npm i dynamic-string`
 
 ## Getting started
-Import from the library `dynamic-string` the named export `dynamicString`.
+Import `dynamicString` from `dynamic-string` .
+
 ```js
 import { dynamicString } from 'dynamic-string'
 ```
-This is a curried function which receives two positional arguments: a template string with interpolations with `${}` and an object with the variables to be interpolated as keys. 
 
+This [curried function](https://en.wikipedia.org/wiki/Currying) receives two positional arguments:
+
+- A string template with '${}' for interpolation
+- An object with the variables to be interpolated as keys. 
+
+You can use it directly or not, as in:
 
 ```js
 const string = dynamicString('https://api.com/${id}', { id: '12101909' }) // https://api.com/12101909
