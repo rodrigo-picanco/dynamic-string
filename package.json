@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "lerna:bootstrap":"lerna bootstrap",
-    "lerna:publish": "lerna publish from-package --yes"
+    "lerna:publish": "lerna publish from-package --yes --no-verify-access"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
