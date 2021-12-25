@@ -15,19 +15,18 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm run lerna:bootstrap
+      - run: npm run build
 
 
-  publish-npm:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
+          node-version: 16
           registry-url: https://registry.npmjs.org/
-          node-version: ${{ matrix.node-version }}
-          always-auth: true
-      - run: npm run lerna:publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
