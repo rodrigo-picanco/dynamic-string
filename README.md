@@ -1,11 +1,5 @@
 # Dynamic string
-
-*“One day I will find the right words, and they will be simple.”*
-
-Jack Kerrouac
-
-A curried dynamic template string for those who need to reuse intepolation in js
-
+A curried dynamic template string for those who need to reuse string intepolation in javascript in things such as api endpoints, user context based text, etc.
 
 ## Install
 
@@ -14,13 +8,19 @@ A curried dynamic template string for those who need to reuse intepolation in js
 `npm i dynamic-string`
 
 ## Getting started
-
+Import from the library `dynamic-string` the named export `dynamicString`.
 ```js
 import { dynamicString } from 'dynamic-string'
+```
+This is a curried function which receives two positional arguments: a template string with interpolations with `${}` and an object with the variables to be interpolated as keys. 
 
-const string = dynamicString('Hello ${name}', { name: 'João' }) // 'Hello João'
+
+```js
+const string = dynamicString('https://api.com/${id}', { id: '12101909' }) // https://api.com/12101909
+
 const stringFn = dynamicString('Hey ${name}') // fn ({name}) => `Hey ${name}`
 ```
-## Examples
+
+## Other examples
 
 - [Rendering html](https://codesandbox.io/s/dynamic-string-html-interpolation-ym90q?file=/src/index.js)
