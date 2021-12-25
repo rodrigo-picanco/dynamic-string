@@ -1,6 +1,6 @@
 {
-  "name": "dynamic-template",
-  "version": "0.0.5",
+  "name": "dynamic-string",
+  "version": "0.0.12",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
