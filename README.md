@@ -13,7 +13,7 @@ You can use it to replace id's in API endpoints, username's in greetings or what
 Import `dynamicString` from `dynamic-string` .
 
 ```js
-import { dynamicTemplate } from 'dynamic-string'
+import { dynamicString } from 'dynamic-string'
 ```
 
 This [curried function](https://en.wikipedia.org/wiki/Currying) receives two positional arguments:
@@ -24,9 +24,9 @@ This [curried function](https://en.wikipedia.org/wiki/Currying) receives two pos
 You can use it directly or not, as in:
 
 ```js
-const string = dynamicTemplate('https://api.com/${id}', { id: '12101909' }) // https://api.com/12101909
+const string = dynamicString('https://api.com/${id}', { id: '12101909' }) // https://api.com/12101909
 
-const stringFn = dynamicTemplate('Hey ${name}') // fn ({name}) => `Hey ${name}`
+const stringFn = dynamicString('Hey ${name}') // fn ({name}) => `Hey ${name}`
 ```
 
 ## Other examples
