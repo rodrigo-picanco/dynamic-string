@@ -13,7 +13,7 @@ You can use it to replace id's in API endpoints, username's in greetings or what
 Import `dynamicString` from `dynamic-string` .
 
 ```js
-import { dynamicTemplate } from 'dynamic-string'
+import { dynamicString } from 'dynamic-string'
 ```
 
 This [curried function](https://en.wikipedia.org/wiki/Currying) receives two positional arguments:
